@@ -1,61 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-  
-<head>
-    <meta charset="utf-8">
-    <title>Steven Sisman</title>
-    <link rel="shortcut icon" type="image/png" href="images/headshot.png"/>
-  
-</head>
+---
+layout: default
+title: "Mitchell Hillman"
+---
+<img class="resume__portrait" src="img/portrait.jpg" alt="Portrait of Mitchell Hillman">
+<h1 class="resume__heading">{{site.data.resume.name}}</h1>
+<p class="resume__location">{{site.data.resume.location}}</p>
+<p class="resume__phone">{{site.data.resume.phone}}</p>
+<p class="resume__email"><a href={`mailto:${{site.data.resume.email}}`}>{{site.data.resume.email}}</a></p>
 
-<body style=“margin:0;”>
-    <!--First section-->
-    <div>
-    <img src="images/headshot.png" style="height:150px" alt="Portrait of Steven Sisman">
-    <h1 style="font-size:40px; color:black margin:10px;"> Steven Sisman</h1>
-    <p class="resume__location">Charlottesville, Virginia</p>
-    <p class="resume__phone">(434) 465-5783</p>
-    <p class="resume__email"><a href={`mailto:$steven.sisman@gmail.com`}>steven.sisman@gmail.com</a></p>
-    </div>
-
-    <h2 class="resume__sectionHeading">Work History</h2>
-
-    <div class="job">
-      <h3 class="job__title">Senior Financial Analyst and Project Manager</h3>
-      <p class="job__company">UVA Community Credit Union</p>
-      <p class="job__dates">09/2012 - Present</p>
-    </div>
-  
-    <div class="job">
-      <h3 class="job__title">Senior Financial Analyst and UAT Lead</h3>
-      <p class="job__company">S&P Global Market Intelligence (previously SNL Financial)</p>
-      <p class="job__dates">10/2010 - 09/2012</p>
-    </div>
-
-    <div class="job">
-        <h3 class="job__title">Financial Statement Translator</h3>
-        <p class="job__company">S&P Global Market Intelligence (previously SNL Financial)</p>
-        <p class="job__dates">07/2010 - 10/2010</p>
-    </div>
-  
-  <h2 class="resume__sectionHeading">Education</h2>
-  
-    <div class="degree">
-        <p class="degree__degree">B.S., Finance and Accounting</p>
-        <p class="degree__school">Virginia Tech</p>
-        <p class="degree__dates">12/2009</p>
-    </div>
-    <div>
-        <p class="degree__degree">_______________</p>
-    </div>
-    </div>
-    <div class="degree">
-        <p class="degree__degree">Masters, Business</p>
-        <p class="degree__school">Liberty University</p>
-        <p class="degree__dates">05/2020</p>
-      </div>
-  
-      </div>
-</body>
-
-</html>
+<h2 class="resume__sectionHeading">Work History</h2>
+{% include_relative _includes/_jobs.html %}
+<h2 class="resume__sectionHeading">Education</h2>
+{% include_relative _includes/_degrees.html %}
